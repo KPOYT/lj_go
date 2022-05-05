@@ -8,9 +8,13 @@ import (
 )
 
 // Unzip extracts a .zip archive into the specified destination directory.
-// It returns a slice of the filepaths of the extracted files, relative to the destination root.
-// If the destination already exists, it will be overwritten.
+// It returns a string slice of the filepaths for each extracted file, relative to the destination root.
+// If any of the destination files or folders already exists, they will be overwritten assuming the process has write permissions to the destination.
+//
+// The destination parent will be named after the input .zip file.
+// e.g. if the input .zip file is named "test.zip", and the destination is "/data/project", the final destination will be "/data/project/test".
 func Unzip(source, destination string) ([]string, error) {
+
 	source = filepath.Clean(source)
 	destination = filepath.Clean(destination)
 
