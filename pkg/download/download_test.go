@@ -4,6 +4,7 @@ import (
 	"os"
 	"path/filepath"
 	"testing"
+	"time"
 )
 
 func TestFromURL(t *testing.T) {
@@ -35,6 +36,8 @@ func TestFromURL(t *testing.T) {
 	if string(b[:n]) != "User-agent: *" {
 		t.Fatalf("robots.txt is not correct; wanted 'User-agent: *', got %v", string(b[:n]))
 	}
+
+	time.Sleep(time.Second * 1)
 
 	// TEST CALCULATED BASE
 	clDir := filepath.Join(t.TempDir(), "calculated-base")
