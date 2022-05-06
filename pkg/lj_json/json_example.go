@@ -12,7 +12,7 @@ func exDecodeTo() {
 
 	j := jsonStruct{}
 
-	err := DecodeTo(&j, "../../internal/test/data/json/test.json")
+	err := DecodeTo(&j, "../../internal/test/data/json/test.json", 0)
 	if err != nil {
 		log.Fatal(err)
 	}

@@ -25,19 +25,19 @@ func TestDecodeTo(t *testing.T) {
 	testJSONPath := "../../internal/test/data/json/test.json"
 
 	c := correctTestStruct{}
-	err := DecodeTo(&c, testJSONPath)
+	err := DecodeTo(&c, testJSONPath, 0)
 	if err != nil {
 		t.Fatal(err)
 	}
 
 	m := malformedTestStruct{}
-	err = DecodeTo(&m, testJSONPath)
+	err = DecodeTo(&m, testJSONPath, 0)
 	if err == nil {
 		t.Fatal(err)
 	}
 
 	e := extraTestStruct{}
-	err = DecodeTo(&e, testJSONPath)
+	err = DecodeTo(&e, testJSONPath, 0)
 	if err != nil {
 		t.Fatal(err)
 	}
@@ -49,8 +49,8 @@ func TestDecodeTo(t *testing.T) {
 	multiJSONPath := "../../internal/test/data/json/multi"
 
 	multi := correctTestStruct{}
-	err = DecodeTo(&multi, multiJSONPath)
-	if err.Error() != "supplied multiple json objects in one file when only one is allowed" {
+	err = DecodeTo(&multi, multiJSONPath, 0)
+	if err.Error() != "../../internal/test/data/json/multi contains multiple json objects in one file when only one is allowed" {
 		t.Fatal(err)
 	}
 }

@@ -9,7 +9,7 @@
 <a name='funcDecodeTo'></a>**func DecodeTo**
 
 ```go
-DecodeTo(i interface{}, jsonPath string) error
+DecodeTo(i interface{}, jsonPath string, maxReadSize int64)
 ```
 
 Decodes a json file into a corresponding json struct, disallowing missing fields.
