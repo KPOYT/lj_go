@@ -16,6 +16,10 @@ func main() {
 
 ## Reference
 
+- [func DecodeTo](REFERENCE.md#funcDecodeTo)
+- [func Download](REFERENCE.md#funcDownload)
+- [func Unzip](REFERENCE.md#funcUnzip)
+
 ### Requirements
 
 In order to be included, each function must:
