@@ -28,7 +28,6 @@ If the file is larger than this, an error is returned. Set to 0 to read the whol
 </details>
 
 \
-\
 <a name='funcDownload'></a>**func Download**
 
 ```go
