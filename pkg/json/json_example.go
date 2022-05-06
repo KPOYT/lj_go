@@ -3,7 +3,7 @@ package json
 import "log"
 
 type jsonStruct struct {
-	Test string `json:"test"`
+	Test  string   `json:"test"`
 	Names []string `json:"names"`
 }
 

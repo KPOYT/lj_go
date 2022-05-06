@@ -5,19 +5,19 @@ import (
 )
 
 type correctTestStruct struct {
-	Test string `json:"test"`
+	Test  string   `json:"test"`
 	Names []string `json:"names"`
 }
 
 type malformedTestStruct struct {
-	Test string `json:"pest"`
+	Test  string   `json:"pest"`
 	Names []string `json:"names"`
 }
 
 type extraTestStruct struct {
-	Test string `json:"test"`
+	Test  string   `json:"test"`
 	Names []string `json:"names"`
-	Extra string `json:"extra"`
+	Extra string   `json:"extra"`
 }
 
 func TestDecodeTo(t *testing.T) {

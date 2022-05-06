@@ -25,9 +25,9 @@ func (d *downloadInformation) Write(p []byte) (n int, err error) {
 	return int(d.counter), nil
 }
 
-// Downloads a file from a URL and saves it to a local file. 
+// Downloads a file from a URL and saves it to a local file.
 // Download progress is reported in bytes to stdout. If possible, the content length will be used to calculate the percentage completion.
-// 
+//
 // If an empty destFileName string is provided, the file name will be calculated from the base of the provided URL.
 func FromURL(URL, destFolder, destFileName string) error {
 	err := os.MkdirAll(destFolder, os.ModePerm)

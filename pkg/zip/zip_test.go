@@ -15,7 +15,6 @@ import (
 
 // This test will unzip the testzip.zip file into a temporary directory, and validate that the correct files have been extracted and placed correctly.
 
-
 func TestUnzip(t *testing.T) {
 	tmpDir := t.TempDir()
 
@@ -29,7 +28,6 @@ func TestUnzip(t *testing.T) {
 		"ziptest/top.txt",
 		"ziptest/nested",
 		"ziptest/nested/nested.txt",
-		
 	}
 	var unzipOut bool
 	for _, f := range expectedFiles {
@@ -50,11 +48,10 @@ func TestUnzip(t *testing.T) {
 		t.Fatal(err)
 	}
 
-
 }
 
 func checkUnzipOutput(files []string, path string) bool {
-		for _, f := range files {
+	for _, f := range files {
 		if f == path {
 			return true
 		}
