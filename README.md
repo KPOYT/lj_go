@@ -6,6 +6,16 @@
 go get github.com/lambdajack/lj_go
 ```
 
+```go
+import "github.com/lambdajack/lj_go/pkg/lj_archive"
+
+func main() {
+	files, err := lj_archive.Unzip("path/to/file.zip", "path/to/out/dir")
+}
+```
+
+## Packages
+
 ### Requirements
 
 In order to be included, each function must:
