@@ -1,4 +1,4 @@
-package json
+package lj_json
 
 import "log"
 

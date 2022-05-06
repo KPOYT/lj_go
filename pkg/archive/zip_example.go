@@ -1,4 +1,4 @@
-package zip
+package lj_archive
 
 import (
 	"fmt"

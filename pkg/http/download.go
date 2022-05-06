@@ -1,4 +1,4 @@
-package download
+package lj_http
 
 import (
 	"fmt"
@@ -29,7 +29,7 @@ func (d *downloadInformation) Write(p []byte) (n int, err error) {
 // Download progress is reported in bytes to stdout. If possible, the content length will be used to calculate the percentage completion.
 //
 // If an empty destFileName string is provided, the file name will be calculated from the base of the provided URL.
-func FromURL(URL, destFolder, destFileName string) error {
+func Download(URL, destFolder, destFileName string) error {
 	err := os.MkdirAll(destFolder, os.ModePerm)
 	if err != nil {
 		return err

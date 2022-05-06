@@ -1,4 +1,4 @@
-package download
+package lj_http
 
 import (
 	"os"
@@ -7,13 +7,13 @@ import (
 	"time"
 )
 
-func TestFromURL(t *testing.T) {
+func TestDownload(t *testing.T) {
 	URL := "https://raw.githubusercontent.com/lambdajack/go/main/internal/test/data/download/robots.txt"
 
 	// TEST SPECIFIED BASE
 	spDir := filepath.Join(t.TempDir(), "specified-base")
 
-	err := FromURL(URL, spDir, "we_love_robots.txt")
+	err := Download(URL, spDir, "we_love_robots.txt")
 	if err != nil {
 		t.Fatal(err)
 	}
@@ -42,7 +42,7 @@ func TestFromURL(t *testing.T) {
 	// TEST CALCULATED BASE
 	clDir := filepath.Join(t.TempDir(), "calculated-base")
 
-	err = FromURL(URL, clDir, "")
+	err = Download(URL, clDir, "")
 	if err != nil {
 		t.Fatal(err)
 	}
