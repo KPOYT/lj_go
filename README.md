@@ -14,7 +14,7 @@ func main() {
 }
 ```
 
-## Packages
+## Reference
 
 ### Requirements
 
