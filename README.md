@@ -19,6 +19,7 @@ func main() {
 - [func DecodeTo](REFERENCE.md#funcDecodeTo)
 - [func Download](REFERENCE.md#funcDownload)
 - [func Unzip](REFERENCE.md#funcUnzip)
+- [func ValidateHTML](REFERENCE.md#funcValidateHTML)
 
 ### Requirements
 
