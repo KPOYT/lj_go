@@ -6,6 +6,7 @@ import (
 	"strings"
 )
 
+// ValidateHTML validates an HTML string for well-formedness.
 func ValidateHTML(htmlToValidate string) error {
 	r := strings.NewReader(htmlToValidate)
 	d := xml.NewDecoder(r)
