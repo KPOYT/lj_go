@@ -27,7 +27,7 @@ func DecodeTo(i interface{}, jsonPath string, maxReadSize int64) error {
 	if err != nil {
 		return err
 	}
-	
+
 	if s.Size() == 0 {
 		return fmt.Errorf("%s is empty", jsonPath)
 	}
