@@ -3,6 +3,7 @@
 - [func DecodeTo](#funcDecodeTo)
 - [func Download](#funcDownload)
 - [func Unzip](#funcUnzip)
+- [func ValidateHTML](#funcValidateHTML)
 
 ## Usage
 
@@ -10,7 +11,7 @@
 <a name='funcDecodeTo'></a>**func DecodeTo**
 
 ```go
-DecodeTo(i interface{}, jsonPath string, maxReadSize int64)
+DecodeTo(i interface{}, jsonPath string, maxReadSize int64) error
 ```
 
 <details>
@@ -62,5 +63,23 @@ If any of the destination files or folders already exists, they will be overwrit
 
 The destination parent will be named after the input .zip file.
 e.g. if the input .zip file is named "test.zip", and the destination is "/data/project", the final destination will be "/data/project/test".</em>
+
+</details>
+
+\
+<a name='funcValidateHTML'></a>**func ValidateHTML**
+
+```go
+func ValidateHTML(htmlToValidate: string) error
+```
+
+<details>
+
+<summary>Checks to see if a html string is valid.</summary>
+
+<em>Html validation is difficult and this function makes use of the slightly strict xml parser from go/x.
+
+It will parse html, xml and any other compatible format.
+</em>
 
 </details>
