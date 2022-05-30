@@ -65,6 +65,8 @@ func Download(URL, destFolder, destFileName string) error {
 		return fmt.Errorf("bad status code (%v) received from %v", resp.StatusCode, URL)
 	}
 
+	client.Timeout = 0
+
 	di := downloadInformation{
 		destFileName:  destFileName,
 		counter:       0,
