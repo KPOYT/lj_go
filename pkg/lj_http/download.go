@@ -6,7 +6,6 @@ import (
 	"net/http"
 	"os"
 	"path/filepath"
-	"time"
 )
 
 type downloadInformation struct {
@@ -46,9 +45,7 @@ func Download(URL, destFolder, destFileName string) error {
 		return err
 	}
 
-	client := &http.Client{
-		Timeout: time.Second * 10,
-	}
+	client := &http.Client{}
 
 	r, err := http.NewRequest(http.MethodGet, URL, nil)
 	if err != nil {
