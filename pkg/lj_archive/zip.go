@@ -52,17 +52,17 @@ func write(destination string, f *zip.File) error {
 	path := filepath.Join(destination, f.Name)
 
 	if f.FileInfo().IsDir() {
-		err = os.MkdirAll(path, f.Mode())
+		err = os.MkdirAll(path, os.ModePerm)
 		if err != nil {
 			return err
 		}
 	} else {
-		err = os.MkdirAll(filepath.Dir(path), f.Mode())
+		err = os.MkdirAll(filepath.Dir(path), os.ModePerm)
 		if err != nil {
 			return err
 		}
 
-		f, err := os.OpenFile(path, os.O_WRONLY|os.O_CREATE|os.O_TRUNC, f.Mode())
+		f, err := os.OpenFile(path, os.O_WRONLY|os.O_CREATE|os.O_TRUNC, os.ModePerm)
 		if err != nil {
 			return err
 		}
